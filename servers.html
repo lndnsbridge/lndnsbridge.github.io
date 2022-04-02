@@ -62,8 +62,10 @@ h2 {font-family: 'Roboto Condensed', sans-serif; color:white;display:inline-bloc
 .past {color: red;}
 .uocome {color: yellow;}
 .brsmall {display:block; margin:-2em;}
+body {opacity: 0;
+transition: opacity 0.5s;}
 </style>
-<body>
+<body onload="document.body.style.opacity='1'">
 <a href="index.html"><img src="assets/ggucsmall.png" style="align: top-left;left-margin:0;"></a>
 <h2 class="navcurrent">Active</h2><br/><h2 class="navpast">Past</h2><br/><h2 class="navupcomming">Upcomming</h2>
 <center><h2 class="current">Origin Realms</h2><span class="brsmall"></span><h2 class="current">Hypixel</h2><span class="brsmall"></span><h2 class="uocome">Arcovia Games</h2><span class="brsmall"></span><h2 class="past">Mineclub</h2><span class="brsmall"></span><h2 class="past">CosmicSky</h2></center>
