@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>GGUC | Homepage</title>
+<title>ImTheCityLondon | Servers</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
-<link rel="shortcut icon" href="assets/ggucico.png" type="image/x-icon">
+<link rel="icon" type="image/x-icon" href="assets/ImTheCityLondonsmall.png">
 <style>
 body {
 	background-color: #121213;
@@ -12,19 +13,14 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-size: 150%;
+	opacity: 0;
+	transition: opacity 0.5s;
 }
-h1 {font-family: 'Roboto Condensed', sans-serif; text-align:center;color:white;}
-h2 {font-family: 'Roboto Condensed', sans-serif; color:white;display:inline-block;}
 
-#outPopUp {
-  position: absolute;
-  width: 343px;
-  height: 200px;
-  z-index: 15;
-  top: 55%;
-  left: 48%;
-  margin: -100px 0 0 -150px;;
-}
+h1 {font-family: 'Roboto Condensed', sans-serif; text-align:left;color:white;}
+h2 {font-family: 'Roboto Condensed', sans-serif; color:white;display:inline-block; text-align:left;}
+
+
 .navpast {
 	position:fixed;
 	bottom: 0px;
@@ -49,25 +45,33 @@ h2 {font-family: 'Roboto Condensed', sans-serif; color:white;display:inline-bloc
   text-align: left;
   color: green;
 }
-#outPopUp2 {
-  position: absolute;
-  width: 542.7px;
-  height: 160px;
-  z-index: 15;
-  top: 61%;
-  left: 43.5%;
-  margin: -100px 0 0 -150px;;
-}
+a {color:#121213;}
 .current {color: green;}
 .past {color: red;}
-.uocome {color: yellow;}
+.upcome {color: yellow;}
 .brsmall {display:block; margin:-2em;}
-body {opacity: 0;
-transition: opacity 0.5s;}
+.brinvert {display:block; margin:-1.5em;}
+.brspace {display:block; margin:0em;}
 </style>
 <body onload="document.body.style.opacity='1'">
-<a href="index.html"><img src="assets/ggucsmall.png" style="align: top-left;left-margin:0;"></a>
-<h2 class="navcurrent">Active</h2><br/><h2 class="navpast">Past</h2><br/><h2 class="navupcomming">Upcomming</h2>
-<center><h2 class="current">Origin Realms</h2><span class="brsmall"></span><h2 class="current">Hypixel</h2><span class="brsmall"></span><h2 class="uocome">Arcovia Games</h2><span class="brsmall"></span><h2 class="past">Mineclub</h2><span class="brsmall"></span><h2 class="past">CosmicSky</h2></center>
+<a href="index.html">
+<img src="assets/ImTheCityLondonsmall.png" style="align: top-left;left-margin:0;"></a><span class="brinvert"></span><h1 style="text-align:left">Servers</h1>
+
+
+
+
+
+<h2 class="current">Origin Realms</h2>
+<span class="brsmall"></span>
+<h2 class="current">Hypixel</h2>
+<span class="brsmall"></span>
+<h2 class="past">Mineclub</h2>
+<span class="brsmall"></span>
+<h2 class="past">CosmicSky</h2>
+<h2 class="navcurrent">Active</h2>
+<br/>
+<h2 class="navpast">Past</h2>
+<br/>
+<h2 class="navupcomming">Upcomming</h2>
 </body>
 </html>

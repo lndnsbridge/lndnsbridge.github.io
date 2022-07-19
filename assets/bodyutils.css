@@ -1,0 +1,9 @@
+body {
+	background-color: #121213;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 150%;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
