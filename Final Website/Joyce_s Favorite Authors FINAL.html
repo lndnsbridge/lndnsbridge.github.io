@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyce's Favorite Authors</title>
+    <style>
+        @font-face {
+            font-family: 'Nihonium113';
+            src: url('fonts/Nihonium113.woff2') format('woff2'),
+                 url('fonts/Nihonium113.woff') format('woff'),
+                 url('fonts/Nihonium113.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Nihonium113', sans-serif;
+            background-color: black;
+            color: green;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+        .window {
+            background: black;
+            border: 2px solid green;
+            margin: 50px auto;
+            padding: 20px;
+            width: 100%;
+            max-width: 12in;
+        }
+        .title-bar {
+            background: green;
+            color: black;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .author-section {
+            margin: 10px 0;
+        }
+        .author-section input {
+            margin-left: 10px;
+            font-family: 'Nihonium113', sans-serif;
+            font-size: 18px;
+        }
+        .imageDiv {
+            margin: 0px;
+            margin-bottom: -3px;
+        }
+        .number-reveal {
+            opacity: 0;
+            margin: -2px;
+        }
+        .invisible {
+            opacity: 0;
+        }
+        .fadeIn {
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-duration: 1.2s;
+            animation-fill-mode: forwards;
+        }
+        .imageBox {
+            background-color: black;
+            border: 2px solid green;
+            width: 290px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .audio-controls button {
+            background: green;
+            border: 2px solid black;
+            color: black;
+            font-size: 18px;
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Nihonium113', sans-serif;
+        }
+        .audio-controls .label {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        @keyframes fadeInOpacity {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <script src="fuck.js"></script>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">Joyce's Favorite Authors</div>
+        <div class="content">
+            <div class="author-section">
+                <div class="audio-controls">
+                    <span class="label">Audio 1:</span>
+                    <button data-audio-id="audio1" data-action="play">Play</button>
+                    <button data-audio-id="audio1" data-action="pause">Pause</button>
+                </div>
+                <audio id="audio1">
+                    <source src="To be or not to be.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <input type="text" id="author1" placeholder="Author's Last Name">
+                <button onclick="validateAuthor('Shakespeare', 'author1', 'reveal1')">Check</button>
+            </div>
+            <div class="author-section">
+                <div class="audio-controls">
+                    <span class="label">Audio 2:</span>
+                    <button data-audio-id="audio2" data-action="play">Play</button>
+                    <button data-audio-id="audio2" data-action="pause">Pause</button>
+                </div>
+                <audio id="audio2">
+                    <source src="nevermore.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <input type="text" id="author2" placeholder="Author's Last Name">
+                <button onclick="validateAuthor('Poe', 'author2', 'reveal2')">Check</button>
+            </div>
+            <div class="author-section">
+                <div class="audio-controls">
+                    <span class="label">Audio 3:</span>
+                    <button data-audio-id="audio3" data-action="play">Play</button>
+                    <button data-audio-id="audio3" data-action="pause">Pause</button>
+                </div>
+                <audio id="audio3">
+                    <source src="green.mp3" type="audio/mpeg">
+                    
+                </audio>
+                <input type="text" id="author3" placeholder="Author's Last Name">
+                <button onclick="validateAuthor('Seuss', 'author3', 'reveal3')">Check</button>
+            </div>
+            <div class="author-section">
+                <div class="audio-controls">
+                    <span class="label">Audio 4:</span>
+                    <button data-audio-id="audio4" data-action="play">Play</button>
+                    <button data-audio-id="audio4" data-action="pause">Pause</button>
+                </div>
+                <audio id="audio4">
+                    <source src="wizard.mp3" type="audio/mpeg">
+                   
+                </audio>
+                <input type="text" id="author4" placeholder="Author's Last Name">
+                <button onclick="validateAuthor('Rowling', 'author4', 'reveal4')">Check</button>
+            </div>
+            <div class="imageBox">
+                <div class="imageDiv">
+                    <span id="reveal1" class="number-reveal invisible"><img src="image_part_001.jpg" width="144px" height="144px"></span>
+                    <span id="reveal2" class="number-reveal invisible"><img src="image_part_002.jpg" width="144px" height="144px"></span>
+                </div>
+                <div class="imageDiv">
+                    <span id="reveal3" class="number-reveal invisible"><img src="image_part_003.jpg" width="144px" height="144px"></span>
+                    <span id="reveal4" class="number-reveal invisible"><img src="image_part_004.jpg" width="144px" height="144px"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
