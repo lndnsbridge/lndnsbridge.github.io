@@ -9,11 +9,29 @@
 </head>
 <style>
 
-p {color:white;font-size: 50pt;font-family: Arial, Helvetica, sans-serif;text-align: center;transition: .5s;transition-property: color;}
-p:hover {color:gray;font-size: 50pt;font-family: Arial, Helvetica, sans-serif;text-align: center;transition: .5s;transition-property: color;}
+p {color:white;font-size: 4em;font-family: Arial, Helvetica, sans-serif;text-align: center;transition: .5s;transition-property: font-size;}
+p:hover {color:gray;font-size: 5em;font-family: Arial, Helvetica, sans-serif;text-align: center;animation: hahaFunnyColor 1s ease-out 0s infinite;transition: .5s;transition-property: font-size;}
 .container {
   position: relative;
   height: 50vh;
+}
+
+@keyframes hahaFunnyColor {
+  from {
+    color: yellow;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color:green;
+  }
+  75% {
+    color: blue;
+  }
+  100% {
+    color:purple;
+  }
 }
 
 .top-left {padding-left:1em}
